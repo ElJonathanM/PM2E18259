@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityActualizarLosContactos">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" >
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnactatras"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Atras" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtactcodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="377dp"
+                android:layout_height="30dp"
+                android:text="Seleccionar Pais"
+                app:autoSizeTextType="uniform" />
+
+            <Spinner
+                android:id="@+id/cmbactseleccionarpais"
+                android:layout_width="377dp"
+                android:layout_height="34dp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="377dp"
+                android:layout_height="34dp"
+                android:text="Nombre Completo"
+                app:autoSizeTextType="uniform" />
+
+            <EditText
+                android:id="@+id/txtactnombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="376dp"
+                android:layout_height="35dp"
+                android:text="Telefono"
+                app:autoSizeTextType="uniform" />
+
+            <EditText
+                android:id="@+id/txtacttelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="379dp"
+                android:layout_height="34dp"
+                android:text="Nota"
+                app:autoSizeTextType="uniform" />
+
+            <EditText
+                android:id="@+id/txtactnota"
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/acbtnEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Actualizar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
