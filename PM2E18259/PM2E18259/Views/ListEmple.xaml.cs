@@ -26,7 +26,7 @@ namespace PM2E18259.Views
             {
                 case "Ver Registro":
                     Services.Lugar item = (Services.Lugar)e.Item;
-                    var newpage = new MainPage();
+                    var newpage = new VerRegistro();
                     newpage.BindingContext = item;
                     await Navigation.PushAsync(newpage);
                     break;

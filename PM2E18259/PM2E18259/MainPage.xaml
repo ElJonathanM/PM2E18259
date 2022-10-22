@@ -8,14 +8,13 @@
         <Image Margin="10,5,10,5" x:Name="foto" Source="{Binding imageC}"  HeightRequest="200" BackgroundColor="BurlyWood" />
         <Button x:Name="TomarFoto" Text="Tomar Fotografía" Clicked="TomarFoto_Clicked" FontSize="Body" BackgroundColor="GreenYellow"/>
         <Button x:Name="Galeria" Text="Agregar Fotografía" Clicked="Galeria_Clicked" FontSize="Body" BackgroundColor="GreenYellow"/>
-        <Label x:Name="lblCod" Text="{Binding id}"/>
-        <Label x:Name="lblLat" Text="{Binding latitudC}"/>
-        <Label x:Name="lblLon" Text="{Binding longitudC}"/>
+        <Label x:Name="lblCod" Text="{Binding id}" FontSize="Body" TextColor="Black"/>
+        <Label x:Name="lblLat" Text="{Binding latitudC}" FontSize="Body" TextColor="Black"/>
+        <Label x:Name="lblLon" Text="{Binding longitudC}" FontSize="Body" TextColor="Black"/>
         <Entry x:Name="txtDes" Text="{Binding descripcionC}" Placeholder="Ingrese su descripción"/>
 
         <Button x:Name="Agregar" Text="Agregar" Clicked="Agregar_Clicked"/>
         <Button x:Name="Lista" Text="Lista" Clicked="Lista_Clicked"/>
-        <Button x:Name="Eliminar" Text="Eliminar" Clicked="Eliminar_Clicked"/>
         <Button x:Name="Salir" Text="Salir Aplicación" Clicked="Salir_Clicked"/>
 
     </StackLayout>
