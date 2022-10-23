@@ -6,9 +6,10 @@
         <StackLayout>
 
             <maps:Map HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="Mapa" IsShowingUser="True" />
-
-            <Label x:Name="lblLat"   Text="{Binding latitudC}" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lblLong"  Text="{Binding longitudC}" HorizontalTextAlignment="Center"/>
+            <Label x:Name="txtpl" Text="Latitud:" HorizontalTextAlignment="Center" />
+            <Label x:Name="lblLat"   Text="{Binding latitudC}" HorizontalTextAlignment="Center" TextColor="Black" />
+            <Label x:Name="txtjl" Text="Longitud:" HorizontalTextAlignment="Center" />
+            <Label x:Name="lblLong"  Text="{Binding longitudC}" HorizontalTextAlignment="Center" TextColor="Black"/>
             <Label x:Name="lblDesc" IsVisible="false" Text="{Binding descripcionC}"/>
         </StackLayout>
     </ContentPage.Content>

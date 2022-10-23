@@ -48,7 +48,7 @@ namespace PM2E18259
         {
             if (!CrossMedia.Current.IsPickPhotoSupported)
             {
-                await DisplayAlert("Ooops", "Error de permisos", "OK");
+                await DisplayAlert("Lo siento!!", "Error de permisos", "Configura");
                 return;
             }
             var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
@@ -77,7 +77,7 @@ namespace PM2E18259
             {
                 if (direccion == "" || String.IsNullOrEmpty(txtDes.Text))
                 {
-                    await DisplayAlert("Oops", "No se puede agregar si no tiene foto y/o descripción", "OK");
+                    await DisplayAlert("Lo siento!!", "No se puede agregar el registro si no tiene imagen, latitud, longitud o descripción","Ingresa tus datos");
                 }
                 else
                 {
@@ -91,7 +91,7 @@ namespace PM2E18259
                     var resultado = await App.BaseDatos.EmpleadoGuardar(emple);
                     if (resultado != 0)
                     {
-                        await DisplayAlert("Aviso", "Lugar guardado!!", "OK");
+                        await DisplayAlert("AVISO!!", "Lugar guardado con éxito!", "OK");
                         foto.Source = ("");
                         direccion = "";
                         txtDes.Text = "";
@@ -100,13 +100,13 @@ namespace PM2E18259
                     }
                     else
                     {
-                        await DisplayAlert("Oops", "Error al guardar sus datos!", "OK");
+                        await DisplayAlert("LO SIENTO", "Error al guardar sus datos!", "OK");
                     }
                 }
             }
             else
             {
-                await DisplayAlert("Oops", "No se puede guardar si esta es una vista", "OK");
+                await DisplayAlert("LO SIENTO", "No se puede guardar si esta es una vista", "OK");
             }
         }
 
@@ -120,7 +120,7 @@ namespace PM2E18259
         {
             if (String.IsNullOrEmpty(lblCod.Text))
             {
-                await DisplayAlert("Oops", "No se puede actualizar si esta no es una vista", "OK");
+                await DisplayAlert("LO SIENTO", "No se puede actualizar si esta no es una vista", "OK");
             }
             else
             {
@@ -131,12 +131,12 @@ namespace PM2E18259
                 var resultado = await App.BaseDatos.EmpleadoBorrar(emple);
                 if (resultado != 0)
                 {
-                    await DisplayAlert("Aviso", "Lugar eliminado!", "OK");
+                    await DisplayAlert("AVISO", "El lugar ha sido eliminado!", "OK");
                     await Navigation.PopAsync();
                 }
                 else
                 {
-                    await DisplayAlert("Ooops", "Error al eliminar estos datos", "OK");
+                    await DisplayAlert("LO SIENTO", "Error al eliminar estos datos", "OK");
                 }
 
             }

@@ -2,20 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PM2E18259.MainPage">
-    
+
 
     <StackLayout>
-        <Image Margin="10,5,10,5" x:Name="foto" Source="{Binding imageC}"  HeightRequest="200" BackgroundColor="BurlyWood" />
-        <Button x:Name="TomarFoto" Text="Tomar Fotografía" Clicked="TomarFoto_Clicked" FontSize="Body" BackgroundColor="GreenYellow"/>
-        <Button x:Name="Galeria" Text="Agregar Fotografía" Clicked="Galeria_Clicked" FontSize="Body" BackgroundColor="GreenYellow"/>
+        <Label x:Name="pol" Text="SITE VISITOR APP" FontSize="Body" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Image Margin="10,5,10,5" x:Name="foto" Source="{Binding imageC}"  HeightRequest="250" BackgroundColor="LightPink" />
+    
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="TomarFoto" Text="Tomar Foto" Clicked="TomarFoto_Clicked" FontSize="Body" BackgroundColor="DarkSeaGreen" Margin="50,1,0,1"/>
+        <Button x:Name="Galeria" Text="Ir a Galería" Clicked="Galeria_Clicked" FontSize="Body" BackgroundColor="Orange" Margin="30,1,0,1"/>
+        </StackLayout>
+        
         <Label x:Name="lblCod" Text="{Binding id}" FontSize="Body" TextColor="Black"/>
+        <Label x:Name="txter" Text="Latitud:" />
         <Label x:Name="lblLat" Text="{Binding latitudC}" FontSize="Body" TextColor="Black"/>
+        <Label x:Name="txtgh" Text="Longitud:" />
         <Label x:Name="lblLon" Text="{Binding longitudC}" FontSize="Body" TextColor="Black"/>
-        <Entry x:Name="txtDes" Text="{Binding descripcionC}" Placeholder="Ingrese su descripción"/>
+        <Entry x:Name="txtDes" Text="{Binding descripcionC}" Placeholder="Ingrese descripción del sitio"/>
 
-        <Button x:Name="Agregar" Text="Agregar" Clicked="Agregar_Clicked"/>
-        <Button x:Name="Lista" Text="Lista" Clicked="Lista_Clicked"/>
-        <Button x:Name="Salir" Text="Salir Aplicación" Clicked="Salir_Clicked"/>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="Agregar" Text="Agregar" Clicked="Agregar_Clicked" BackgroundColor="LawnGreen" Margin="70,1,30,1" FontSize="Body" />
+            <Button x:Name="Lista" Text="IR A Lista" Clicked="Lista_Clicked" BackgroundColor="CornflowerBlue" Margin="30,1,30,1" FontSize="Body" />
+        </StackLayout>
+
+        <Button x:Name="Salir" Text="Salir de la Aplicación" Clicked="Salir_Clicked" BackgroundColor="Red" Margin="30,20,30,1" FontSize="Body" />
 
     </StackLayout>
 
