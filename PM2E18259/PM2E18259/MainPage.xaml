@@ -15,9 +15,9 @@
         
         <Label x:Name="lblCod" Text="{Binding id}" FontSize="Body" TextColor="Black"/>
         <Label x:Name="txter" Text="Latitud:" />
-        <Label x:Name="lblLat" Text="{Binding latitud}" FontSize="Body" TextColor="Black"/>
+        <Entry x:Name="lblLat"  FontSize="Body" TextColor="Black" IsEnabled="False"/>
         <Label x:Name="txtgh" Text="Longitud:" />
-        <Label x:Name="lblLon" Text="{Binding longitud}" FontSize="Body" TextColor="Black"/>
+        <Entry x:Name="lblLon" FontSize="Body" TextColor="Black" IsEnabled="False"/>
         <Entry x:Name="txtDes" Text="{Binding descripcion}" Placeholder="Ingrese descripción del sitio"/>
 
         <StackLayout Orientation="Horizontal">

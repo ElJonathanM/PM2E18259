@@ -73,11 +73,10 @@ namespace PM2E18259
 
         private async void Agregar_Clicked(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(lblCod.Text))
-            {
-                if (direccion == "" || String.IsNullOrEmpty(txtDes.Text))
+                if (direccion == "" || String.IsNullOrEmpty(txtDes.Text) || String.IsNullOrEmpty(lblLat.Text))
                 {
-                    await DisplayAlert("Lo siento!!", "No se puede agregar el registro si no tiene imagen, latitud, longitud o descripción","Ingresa tus datos");
+                    await DisplayAlert("Lo siento!!", "No se puede agregar el registro si no tiene imagen, latitud, longitud o descripción (Recuerde encender la ubicación del telefono)","Ingresa tus datos");
+
                 }
                 else
                 {
@@ -100,15 +99,14 @@ namespace PM2E18259
                     }
                     else
                     {
-                        await DisplayAlert("LO SIENTO", "Error al guardar sus datos!", "OK");
+                        await DisplayAlert("LO SIENTO", "Debe encender la ubiación", "OK");
                     }
                 }
-            }
-            else
-            {
-                await DisplayAlert("LO SIENTO", "No se puede guardar si esta es una vista", "OK");
-            }
+         
+            
         }
+
+        
 
         private async void Lista_Clicked(object sender, EventArgs e)
         {
@@ -161,11 +159,13 @@ namespace PM2E18259
                     lblLon.Text = location.Longitude.ToString();
                 }
             }
-            catch (FeatureNotSupportedException fnsEx) { }
-            catch (FeatureNotEnabledException fneEx) { }
-            catch (PermissionException pEx) { }
-            catch (Exception ex) { }
+            catch (FeatureNotSupportedException fnsEx) {  }
 
         }
+        public bool EmptyField(Entry campo)
+        {
+            return String.IsNullOrEmpty(campo.Text);
+        }
+
     }
 }
