@@ -1,10 +1,12 @@
-﻿using PM2E18259.Services;
+﻿using Plugin.Media;
+using PM2E18259.Services;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,9 +15,12 @@ namespace PM2E18259.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VerRegistro : ContentPage
     {
+        String longitud, latitud;
         public VerRegistro()
         {
             InitializeComponent();
+            longitud = lblLon.Text;
+            latitud = lblLat.Text;
         }
 
         private async void Eliminar_Clicked(object sender, EventArgs e)
@@ -53,6 +58,25 @@ namespace PM2E18259.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+        }
+
+        private async void Enviar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                await Share.RequestAsync(
+                   new ShareTextRequest
+                   {
+                       Title = "Te comparto la siguiente ubicación",
+                       Text = "Este es el lugar donde me tome la fotografia",
+                       Uri = "https://maps.google.com/?q=" + longitud + "," + latitud
+                   }
+                    );
+            }
+            catch(Exception)
+            {
+
+            }
         }
     }
 }

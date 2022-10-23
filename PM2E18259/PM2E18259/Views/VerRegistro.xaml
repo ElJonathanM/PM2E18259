@@ -4,16 +4,17 @@
              x:Class="PM2E18259.Views.VerRegistro">
     <ContentPage.Content>
         <StackLayout>
-            <Image Margin="30,10,30,5" x:Name="foto" Source="{Binding imageC}"  HeightRequest="250" BackgroundColor="HotPink" />
+            <Image Margin="30,10,30,5" x:Name="foto" Source="{Binding image}"  HeightRequest="250" BackgroundColor="HotPink" />
             <Label x:Name="lblCod" Text="{Binding id}" TextColor="Black"/>
             <Label x:Name="txtol" Text="Latitud:"/>
-            <Label x:Name="lblLat" Text="{Binding latitudC}" TextColor="Black"/>
+            <Label x:Name="lblLat" Text="{Binding latitud}" TextColor="Black"/>
             <Label x:Name="txtytr" Text="Longitud:" />
-            <Label x:Name="lblLon"  Text="{Binding longitudC}" TextColor="Black"/>
-            <Entry x:Name="txtDes" Text="{Binding descripcionC}" IsEnabled="False"/>
+            <Label x:Name="lblLon"  Text="{Binding longitud}" TextColor="Black"/>
+            <Entry x:Name="txtDes" Text="{Binding descripcion}" IsEnabled="False"/>
 
             <Button x:Name="Lista" Text="Ir a Lista" Clicked="Lista_Clicked" BackgroundColor="Green" Margin="30,5,30,5"/>
             <Button x:Name="Eliminar" Text="Eliminar" Clicked="Eliminar_Clicked" BackgroundColor="Red" Margin="30,5,30,5"/>
+            <Button x:Name="Enviar" Text="Compartir" Clicked="Enviar_Clicked" BackgroundColor="YellowGreen" Margin="30,5,30,5"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

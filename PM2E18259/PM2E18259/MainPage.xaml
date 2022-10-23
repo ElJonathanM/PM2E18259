@@ -5,8 +5,8 @@
 
 
     <StackLayout>
-        <Label x:Name="pol" Text="SITE VISITOR APP" FontSize="Body" TextColor="Black" HorizontalTextAlignment="Center"/>
-        <Image Margin="10,5,10,5" x:Name="foto" Source="{Binding imageC}"  HeightRequest="250" BackgroundColor="LightPink" />
+        <Label x:Name="pol" Text="Examen Vivian Lobo y Jonathan Dominguez" FontSize="Body" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Image Margin="10,5,10,5" x:Name="foto" Source="{Binding image}"  HeightRequest="250" BackgroundColor="LightPink" />
     
         <StackLayout Orientation="Horizontal">
             <Button x:Name="TomarFoto" Text="Tomar Foto" Clicked="TomarFoto_Clicked" FontSize="Body" BackgroundColor="DarkSeaGreen" Margin="50,1,0,1"/>
@@ -15,10 +15,10 @@
         
         <Label x:Name="lblCod" Text="{Binding id}" FontSize="Body" TextColor="Black"/>
         <Label x:Name="txter" Text="Latitud:" />
-        <Label x:Name="lblLat" Text="{Binding latitudC}" FontSize="Body" TextColor="Black"/>
+        <Label x:Name="lblLat" Text="{Binding latitud}" FontSize="Body" TextColor="Black"/>
         <Label x:Name="txtgh" Text="Longitud:" />
-        <Label x:Name="lblLon" Text="{Binding longitudC}" FontSize="Body" TextColor="Black"/>
-        <Entry x:Name="txtDes" Text="{Binding descripcionC}" Placeholder="Ingrese descripción del sitio"/>
+        <Label x:Name="lblLon" Text="{Binding longitud}" FontSize="Body" TextColor="Black"/>
+        <Entry x:Name="txtDes" Text="{Binding descripcion}" Placeholder="Ingrese descripción del sitio"/>
 
         <StackLayout Orientation="Horizontal">
             <Button x:Name="Agregar" Text="Agregar" Clicked="Agregar_Clicked" BackgroundColor="LawnGreen" Margin="70,1,30,1" FontSize="Body" />

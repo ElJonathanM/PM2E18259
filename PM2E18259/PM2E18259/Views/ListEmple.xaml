@@ -8,7 +8,7 @@
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding descripcionC}" TextColor="Black" />
+                        <TextCell Text="{Binding descripcion}" TextColor="Black" />
 
                     </DataTemplate>
                 </ListView.ItemTemplate>

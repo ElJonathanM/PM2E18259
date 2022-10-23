@@ -21,7 +21,6 @@ namespace PM2E18259
             InitializeComponent();
             ubicacion();
         }
-
         private async void TomarFoto_Clicked(object sender, EventArgs e)
         {
             var takepic = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
@@ -56,6 +55,7 @@ namespace PM2E18259
                 PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
 
             });
+
             direccion = file.Path;
 
             if (file != null)
@@ -83,10 +83,10 @@ namespace PM2E18259
                 {
                     var emple = new Lugar
                     {
-                        latitudC = lblLat.Text,
-                        longitudC = lblLon.Text,
-                        descripcionC = txtDes.Text,
-                        imageC = direccion
+                        latitud = lblLat.Text,
+                        longitud = lblLon.Text,
+                        descripcion = txtDes.Text,
+                        image = direccion
                     };
                     var resultado = await App.BaseDatos.EmpleadoGuardar(emple);
                     if (resultado != 0)

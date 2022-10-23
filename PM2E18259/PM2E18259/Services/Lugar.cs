@@ -9,9 +9,9 @@ namespace PM2E18259.Services
     {
         [PrimaryKey, AutoIncrement]
         public int id { get; set; }
-        public string latitudC { get; set; }
-        public string longitudC { get; set; }
-        public string descripcionC { get; set; }
-        public string imageC { get; set; }
+        public string latitud { get; set; }
+        public string longitud { get; set; }
+        public string descripcion { get; set; }
+        public string image { get; set; }
     }
 }
